@@ -1,0 +1,124 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+.bodyco {
+	background-image: linear-gradient(rgb(217, 250, 232), rgb(163, 211, 184));
+}
+
+.hed {
+	text-align: left;
+	color: aliceblue;
+}
+
+.hedp {
+	color: aliceblue;
+	text-align: center;
+	padding: 30px 30px;
+	font-size: 50px;
+}
+
+.recard {
+	padding: 5px;
+}
+
+.pata {
+	background: rgba(47, 43, 43, 0.8);
+}
+
+.main {
+	background: rgba(26, 32, 24, 0.6);
+	justify-content: right;
+}
+
+.profile img {
+	top: -60px;
+	position: absolute;
+	left: calc(50% -50%);
+	border: 10px solid white;
+}
+
+.user {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+
+.bar {
+	border-radius: 25px;
+}
+
+form {
+	background: #fff;
+	width: 600px;
+	height: 50px;
+	display: flex;
+}
+
+form .fa-search {
+	align-self: center;
+	padding: 10px 20px;
+	color: #777;
+}
+
+form input {
+	flex: 1;
+	border: none;
+	outline: none;
+}
+
+.bphone {
+	display: flex;
+	font-size: 20px;
+}
+
+.pro {
+	text-align: right;
+	padding-left: 20px;
+}
+
+.deckstara {
+	text-align: right;
+	padding-left: 220px;
+}
+
+.sidebar {
+	margin: 0;
+	padding: 0;
+	width: 450px;
+	background-color: #f1f1f1;
+	position: fixed;
+	height: 100%;
+	overflow: auto;
+}
+
+.sidebar-af {
+	display: block;
+	color: black;
+	padding: 16px;
+	text-decoration: none;
+}
+
+.card.scrol {
+	/* margin: 5px; */
+	padding: 5px;
+	/* width: 500px; */
+	height: 620px;
+	overflow: auto;
+	text-align: justify;
+}
+
+.tcolor {
+	color: rgb(14, 92, 61);
+}
+
+.hed {
+	text-align: center;
+}
+
+/* .rewimg{
+	width: 50px;
+	height: 50px;
+} */
