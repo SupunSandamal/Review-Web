@@ -1,3 +1,44 @@
+<?php
+include '../PHP/includes/session.php';
+
+if (isset($_SESSION['user'])) {
+    header('location: ../RHome.php');
+    exit;
+}
+
+if (isset($_POST['sign-up'])) {
+    $userName = $_POST['userName'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $sql = "INSERT INTO user(`user_name`,`email`,`password`) VALUES('$userName', '$email', '$password')";
+    $result = mysqli_query($con, $sql);
+    if ($result) {
+        echo "Data inserted successfull. Please Login.";
+        header('location: display.php');
+    } else {
+        die(mysqli_error($con));
+    }
+}
+if (isset($_POST['login'])) {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $sql = "select * from user where email='$email'AND password='$password'";
+
+    $result = mysqli_query($con, $sql);
+
+    if (mysqli_num_rows($result) == 1) {
+        echo " You Have Successfully Logged in";
+        header('location: ../RHome.php');
+    } else {
+        echo " You Have Entered Incorrect Password";
+    }
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -23,7 +64,7 @@
     </div>
 
 
-    <form action="../PHP/reglogin.php" id="login" class="input-group"method="post">
+    <form id="login" class="input-group" method="post">
         <input type="text" class="input-field" placeholder="email" required name="email">
         <input type="text" class="input-field" placeholder="Enter Password" required name="password">
         <input type="checkbox" class="chech-box"><span>Remember password</span>
@@ -31,9 +72,9 @@
 
     </form>
 
-<!-- sing up -->
+    <!-- sing up -->
 
-    <form action="../PHP/singup.php" id="singup" class="input-group" method="post">
+    <form id="singup" class="input-group" method="post">
         <input type="text" class="input-field" placeholder="User Name" name="userName">
         <input type="email" class="input-field" placeholder="Email Id" name="email">
         <input type="text" class="input-field" placeholder="Enter Password" name="password">
@@ -52,20 +93,19 @@
             y.style.left = "50px";
             z.style.left = "110px";
         }
+
         function login() {
             x.style.left = "50px";
             y.style.left = "450px";
             z.style.left = "0";
         }
-        
     </script>
-    <?php 
+    <?php
     $PATH = $_SERVER['DOCUMENT_ROOT'] . "/supun/nproject/Reviews/";
-    
+
     include("HTML/footer.html");
     ?>
 
 </body>
 
 </html>
-
