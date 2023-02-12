@@ -24,7 +24,6 @@ DROP DATABASE IF EXISTS `review`;
 CREATE DATABASE IF NOT EXISTS `review` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `review`;
 
--- --------------------------------------------------------
 
 --
 -- Table structure for table `category`

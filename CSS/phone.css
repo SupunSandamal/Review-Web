@@ -102,9 +102,7 @@ form input {
 }
 
 .card.scrol {
-	/* margin: 5px; */
 	padding: 5px;
-	/* width: 500px; */
 	height: 620px;
 	overflow: auto;
 	text-align: justify;
