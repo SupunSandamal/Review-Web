@@ -45,7 +45,7 @@ INSERT INTO `category` (`cate_id`, `cate_name`) VALUES
 (3, 'Laptop Computer'),
 (4, 'Tablets');
 
--- --------------------------------------------------------
+
 
 --
 -- Table structure for table `item`
